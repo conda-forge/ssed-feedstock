@@ -2,7 +2,7 @@
 
 set -o xtrace -o nounset -o pipefail -o errexit
 
-export CFLAGS="${CFLAGS} -Wno-implicit-function-declaration"
+export CFLAGS="${CFLAGS} -Wno-implicit-function-declaration -Wno-int-conversion"
 
 sed -i -e 's/binary dc/binary/g' testsuite/Makefile.am
 sed -i -e 's/dc distrib/distrib/g' testsuite/Makefile.tests
